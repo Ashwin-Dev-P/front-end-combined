@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+.home-nav {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 10px;
+}
+.home-nav_logo {
+  display: flex;
+  align-items: center;
+}
+.home-nav_logo h1 {
+  position: relative;
+  right: 15px;
+  font-size: 2rem;
+}
+.home-nav_links--item {
+  list-style: none;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+}
+.home-nav_links--item:hover {
+  text-decoration: underline;
+  color: rgb(38, 202, 1);
+  font-size: 1.3rem;
+  transition-duration: 0.1s;
+}
+.home-nav_link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.agro-img {
+  width: 130px;
+  height: 105px;
+}
+
+.home-body {
+  height: 84vh;
+  background-image: url(/public/images/homeImages/about-img.webp);
+  background-size: cover;
+}
+.home-body_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+}
+.home-body_about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 50px 100px;
+  margin: 14% auto;
+}
+.home-body_sign-btn {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.home-body_sign-btn:hover {
+  color: white;
+  background-color: darkgreen;
+  transition-duration: 0.6s;
+}
+
+.consumerlanding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.consumer-dashboard_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87.5vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/public/images/consumerDash.webp);
+}
+.consumer-dashboard_body h1 {
+  text-transform: uppercase;
+}
+.consumer-dashboard_body--smallcontent {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.consumer-dashboard_body--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.shop-btn {
+  padding: 8px 20px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+.shop-btn:hover {
+  font-weight: 700;
+  background-color: darkgreen;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.consumer-navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+}
+.consumer-navbar--links {
+  display: flex;
+  list-style: none;
+  margin-right: 100px;
+  padding: 28px 15px;
+}
+.consumer-navbar--links_item {
+  margin: 0 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.consumer-navbar--links_item:hover {
+  text-decoration: underline;
+  color: green;
+  transition-duration: 0.2s;
+}
+
+.home {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+}/*# sourceMappingURL=index.css.map */

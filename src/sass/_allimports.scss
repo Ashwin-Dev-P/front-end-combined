@@ -1,0 +1,16 @@
+@use 'config';
+
+
+// HOMEPAGE
+@use 'homepage/homeNavbar';
+@use 'homepage/homeBody';
+
+
+// CONSUMER
+@use 'consumer/consumerLanding';
+@use 'consumer/consumerDash';
+@use 'consumer/consumerNav';
+
+// FARMER
+@use 'farmer/farmerNavbar';
+@use 'farmer/farmerDash';

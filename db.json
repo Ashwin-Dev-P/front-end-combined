@@ -1,0 +1,48 @@
+{
+  "user": [
+    {
+      "id": "Sharath",
+      "name": "Sharath Lingam",
+      "password": "1",
+      "email": "sharathlingam@mail.com",
+      "phone": "",
+      "country": "india",
+      "address": "",
+      "gender": "male",
+      "userType": "0"
+    },
+    {
+      "id": "Nischal",
+      "name": "Nischal",
+      "password": "1",
+      "email": "nischal@mail.com",
+      "phone": "",
+      "country": "india",
+      "address": "",
+      "gender": "male",
+      "userType": "1"
+    },
+    {
+      "id": "Swarna",
+      "name": "Sangana Swarna",
+      "password": "1",
+      "email": "swarna@mail.com",
+      "phone": "",
+      "country": "india",
+      "address": "",
+      "gender": "female",
+      "userType": "1"
+    },
+    {
+      "id": "Ashwin",
+      "name": "Ashwin Dev",
+      "password": "1",
+      "email": "ashwin@mail.com",
+      "phone": "",
+      "country": "india",
+      "address": "",
+      "gender": "male",
+      "userType": "1"
+    }
+  ]
+}

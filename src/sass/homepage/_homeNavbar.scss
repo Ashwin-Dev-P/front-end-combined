@@ -1,0 +1,46 @@
+.home-nav {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 10px;
+
+    &_logo {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            position: relative;
+            right: 15px;
+            font-size: 2rem;
+        }
+    }
+        
+
+
+        &_links--item{
+            list-style: none;
+            font-size: 1.2rem;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: rgb(38, 202, 1);
+                font-size: 1.3rem;
+                transition-duration: .1s;
+            }
+    }
+    &_link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+}
+
+.agro-img {
+    width: 130px;
+    height: 105px;
+}
