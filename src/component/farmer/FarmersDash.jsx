@@ -1,10 +1,10 @@
 import React from 'react'
-import BarChart from './BarChart';
+import FarmersNav from './FarmersNav';
 
 const FarmersDash = () => {
   return (
     <section className="farmers-Dash">
-        <BarChart />
+      <FarmersNav />
     </section>
   )
 }

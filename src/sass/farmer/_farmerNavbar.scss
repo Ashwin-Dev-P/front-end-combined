@@ -1,0 +1,21 @@
+.farmers-Nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1440px;
+    margin-right: 50px;
+
+    padding: 25px 0;
+    &--items {
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 500;
+        text-decoration: none;
+        margin: 0 15px;
+
+        &:hover {
+            text-decoration: underline;
+            color: rgb(0, 136, 0);
+        }
+    }
+}

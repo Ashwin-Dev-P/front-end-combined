@@ -5,6 +5,7 @@ import FarmersLanding from './component/FarmersLanding';
 import ConsumerLanding from './component/ConsumerLanding';
 import { ToastContainer } from 'react-toastify';
 import Homepage from './component/Homepage';
+import ProductUpload from './component/farmer/ProductUpload';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/farmer-Dash' element={<FarmersLanding />}></Route>
         <Route path='/consumer-Dash' element={<ConsumerLanding />}></Route>
+        <Route path='/farmer/product-upload' element={<ProductUpload />}></Route>
       </Routes>
       </BrowserRouter>
       
