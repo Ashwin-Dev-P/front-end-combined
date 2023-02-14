@@ -43,6 +43,28 @@
       "address": "",
       "gender": "male",
       "userType": "1"
+    },
+    {
+      "id": "ashwin@gmail.com",
+      "name": "Ashwin",
+      "password": "ashwin",
+      "email": "ashwin@gmail.com",
+      "phone": "21345676821",
+      "country": "india",
+      "address": "esrdfhgjkl;'p\n[]",
+      "gender": "male",
+      "userType": "0"
+    },
+    {
+      "id": "ashwin2@gmail.com",
+      "name": "asdfghjk",
+      "password": "ashwin",
+      "email": "ashwin@gmail.com",
+      "phone": "213456789",
+      "country": "india",
+      "address": "dsfghjkl;o'",
+      "gender": "female",
+      "userType": "1"
     }
   ]
 }
