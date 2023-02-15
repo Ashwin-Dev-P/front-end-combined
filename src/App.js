@@ -7,6 +7,8 @@ import { ToastContainer } from "react-toastify";
 import Homepage from "./component/Homepage";
 import ProductUpload from "./component/farmer/ProductUpload";
 import ShopProducts from "./component/mycomponent/ShopProducts";
+import ConsumerProfile from './component/consumerPages/ConsumerProfile';
+import FarmersProfile from "./component/farmer/FarmersProfile";
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/farmer-Dash" element={<FarmersLanding />}></Route>
           <Route path="/consumer-Dash" element={<ConsumerLanding />}></Route>
-
+          <Route path='/consumer/Profile' element={<ConsumerProfile />}></Route>
+          <Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
           <Route path="/consumer/shop" element={<ShopProducts />}></Route>
+
 
           <Route
             path="/farmer/product-upload"

@@ -28,12 +28,15 @@ sessionStorage.clear();
                     if ((resp.password === password) && (resp.userType==='0')) {
                         toast.success('Succesfully Logged in.');
                         usenavigate('/farmer-Dash');
-                        sessionStorage.setItem('username',username);
+                        const userid = resp.id
+                        sessionStorage.setItem('userid',userid);
+                        
                     }
                     else if ((resp.password === password) && (resp.userType==='1')){
                         toast.success('Succesfully Logged in.');
+                        const userid = resp.id
+                        sessionStorage.setItem('userid',userid);
                         usenavigate('/consumer-Dash')
-                        sessionStorage.setItem('username',username);
                     }
                     else{
                         toast.error('Please Enter valid credentials');
