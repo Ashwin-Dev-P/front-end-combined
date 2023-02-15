@@ -22,6 +22,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 
 
 function App() {
+  console.log("Hello")
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(cartAsyncThunk());

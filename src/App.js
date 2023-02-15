@@ -9,6 +9,7 @@ import ProductUpload from "./component/farmer/ProductUpload";
 import ShopProducts from "./component/mycomponent/ShopProducts";
 import ConsumerProfile from './component/consumerPages/ConsumerProfile';
 import FarmersProfile from "./component/farmer/FarmersProfile";
+import { CartCard } from "./components";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/consumer/Profile' element={<ConsumerProfile />}></Route>
           <Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
           <Route path="/consumer/shop" element={<ShopProducts />}></Route>
+          <Route path="/detail/:id" element={<CartCard />}></Route>
 
 
           <Route
