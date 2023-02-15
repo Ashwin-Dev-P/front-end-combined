@@ -1,0 +1,58 @@
+.detailsWrapper {
+  background-color: green;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: url("https://th.bing.com/th/id/OIP.cKcdQRKgPuGr34ExtxgVJwHaFA?pid=ImgDet&rs=1");
+  background: url("https://images8.alphacoders.com/103/1030841.jpg");
+  background: url("https://wallpapercave.com/wp/wp6557377.jpg");
+  background: url("https://images.alphacoders.com/108/thumb-1920-1086007.jpg");
+  background: url("https://i.pinimg.com/originals/9e/f2/0f/9ef20fdc5c21631a259446fc1dc12021.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+.detailForms {
+  width: 100%;
+  padding: 0%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.detailForms>h1{
+  font-size: 50px;
+}
+form {
+  background-color: transparent;
+}
+fieldset {
+  max-width: 300px;
+  min-width: 250px;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+  border-radius: 10px;
+  gap: 20px;
+  border-color: transparent;
+  background-color: rgba(128, 128, 128, 0.8);
+}
+label {
+  color: black;
+}
+input {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 5 px;
+}
+.inputGroup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
