@@ -17,7 +17,7 @@ sessionStorage.clear();
         if (validate()) {
             ///implentation
             // console.log('proceed');
-            fetch("http://localhost:8000/user/" + username).then((res) => {
+            fetch("http://localhost:5000/api/user/" + username).then((res) => {
                 return res.json();
             }).then((resp) => {
                 console.log(resp)

@@ -24,16 +24,14 @@ useEffect(() => {
                 <h2>Personal Information</h2>
             </div>
             <div className="consumer-profile_body--smallcontent">
-            <h1>Profile</h1>
-      <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
-      <p>Phone: {user.phone}</p>
-      <p>Address: {user.address}</p> 
-        
+                <h1>Profile</h1>
+                <p>Name: {user.name}</p>
+                <p>Email: {user.email}</p>
+                <p>Phone: {user.phone}</p>
+                <p>Address: {user.address}</p>         
             </div>
             <div className="consumer-profile_button">
                 <button>SAVE</button>
-
             </div>
     </section>
     

@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 
-// components
-
-import { Navbar } from "../components/index";
-
 //reactforms
 import { useForm } from "react-hook-form";
 
@@ -18,8 +14,10 @@ import { addAsyncThunk } from "../features/products/productSlice";
 //react router dom
 import { useNavigate } from "react-router-dom";
 
-//tostify
+//toastify
 import { toast, ToastContainer } from "react-toastify";
+
+import FarmersNav from "./FarmersNav";
 
 //import styles from "../styles/Create.module.css";
 
@@ -77,7 +75,7 @@ function Create() {
   };
   return (
     <>
-      <Navbar />
+      <FarmersNav />
       <div >
         <div >
           <h1>Create product</h1>
@@ -90,7 +88,7 @@ function Create() {
             <fieldset>
               {/* name */}
               <div >
-                <label for="pname">Product name:</label>
+                <label htmlFor="pname">Product name:</label>
                 <input
                   id="pname"
                   placeholder="Product Name"
@@ -101,7 +99,7 @@ function Create() {
               </div>
               {/* price */}
               <div >
-                <label for="pprice">Product Price:</label>
+                <label htmlFor="pprice">Product Price:</label>
                 <input
                   id="pprice"
                   placeholder="Product Price"
@@ -113,7 +111,7 @@ function Create() {
               {/* size */}
 
               <div >
-                <label for="s">Product quantity:</label>
+                <label htmlFor="s">Product quantity:</label>
 
                 <input
                   type="checkbox"
@@ -122,7 +120,7 @@ function Create() {
                   value={true}
                   {...register("tenkg")}
                 />
-                <label for="s">S</label>
+                <label htmlFor="s">S</label>
                 <input
                   type="checkbox"
                   id="m"
@@ -130,7 +128,7 @@ function Create() {
                   value={true}
                   {...register("fivekg")}
                 />
-                <label for="m">M</label>
+                <label htmlFor="m">M</label>
                 <input
                   type="checkbox"
                   id="l"
@@ -138,11 +136,11 @@ function Create() {
                   value={true}
                   {...register("twokg")}
                 />
-                <label for="l">L</label>
+                <label htmlFor="l">L</label>
               </div>
               {/* Description */}
               <div >
-                <label for="pcolor">Product Description:</label>
+                <label htmlFor="pcolor">Product Description:</label>
                 <input
                   id="pcolor"
                   name="description"
@@ -152,7 +150,7 @@ function Create() {
               </div>
               {/* product */}
               <div>
-                <label for="veg">Type:</label>
+                <label htmlFor="veg">Type:</label>
                 <input
                   id="veg"
                   type="radio"
@@ -160,7 +158,7 @@ function Create() {
                   value="true"
                   {...register("veg", { required: true })}
                 />
-                <label for="veg">VEGETABLES</label>
+                <label htmlFor="veg">VEGETABLES</label>
                 <input
                   id="fruit"
                   type="radio"
@@ -168,11 +166,11 @@ function Create() {
                   value="false"
                   {...register("veg", { required: true })}
                 />
-                <label for="fruit">FRUITS</label>
+                <label htmlFor="fruit">FRUITS</label>
               </div>
                 {/* image */}
               <div>
-                <label for="pUrl">Product image url:</label>
+                <label htmlFor="pUrl">Product image url:</label>
                 <input
                   id="pUrl"
                   placeholder="Product image url"

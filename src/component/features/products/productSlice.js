@@ -11,7 +11,7 @@ const initialState = {
 export const fetchAsyncThunk = createAsyncThunk(
   "products/fetchAsyncThunk",
   async () => {
-    const response = await fetch("/products");
+    const response = await fetch("/api/products/");
     const data = await response.json();
     console.log(data);
     return data;
@@ -30,7 +30,7 @@ export const addAsyncThunk = createAsyncThunk(
     }
 
     const response = await fetch(
-      "http://localhost:8000/products",
+      "http://localhost:5000/api/products/",
       requestOptions
     );
     const data = await response.json();
@@ -91,7 +91,7 @@ export const getMovieAsyncThunk = createAsyncThunk(
     };
 
     const response = await fetch(
-      `/products/${id}`,
+      `/api/products/${id}`,
       requestOptions
     );
     const data = await response.json();
@@ -106,7 +106,7 @@ export const deleteProductAsyncThunk = createAsyncThunk(
       method: "DELETE",
     };
     const response = await fetch(
-      `/products/${id}`,
+      `/api/products/${id}`,
       requestOptions
     );
     const data = await response.json();

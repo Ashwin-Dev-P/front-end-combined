@@ -55,7 +55,7 @@ const Register = () => {
             let regobj = { id, name, password, email, phone, country, address, gender, userType };
             if (IsValidate()) {
             console.log(regobj);
-            fetch("http://localhost:8000/user", {
+            fetch("http://localhost:5000/api/user", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(regobj)
