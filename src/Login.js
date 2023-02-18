@@ -41,10 +41,15 @@ const Login = () => {
             throw err;
           } else {
             toast.success("Succesfully Logged in.");
+
             const userid = resp.user._id;
-            const jwt = resp.user.jwt;
+            const jwt = resp.jwt;
+            const username = resp.user.username;
+
             sessionStorage.setItem("userid", userid);
             sessionStorage.setItem("jwt", jwt);
+            sessionStorage.setItem("username", username);
+
             if (resp.user.type === 0) {
               //farmer
               usenavigate("/farmer-Dash");

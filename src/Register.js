@@ -81,9 +81,13 @@ const Register = () => {
           }
 
           const userid = res.user._id;
-          const jwt = res.user.jwt;
+          const jwt = res.jwt;
+          const username = res.user.username;
+
           sessionStorage.setItem("userid", userid);
           sessionStorage.setItem("jwt", jwt);
+          sessionStorage.setItem("username", username);
+
           toast.success("Registered successfully.");
 
           if (res.user.type === 0) {
