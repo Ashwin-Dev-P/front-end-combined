@@ -31,6 +31,8 @@ const defaultValues = {
   fivekg: "",
   tenkg: "true",
   url: "",
+  quantity: 1,
+  farmer_id: sessionStorage.getItem("userid"),
 };
 
 function Create() {
@@ -54,6 +56,7 @@ function Create() {
     const newProeuct = {
       id: uniqueid,
       ...data,
+      image: data.url,
     };
 
     const response = await dispatch(addAsyncThunk(newProeuct));
@@ -67,27 +70,38 @@ function Create() {
       fivekg: "",
       tenkg: "true",
       url: "",
+      farmer_id: sessionStorage.getItem("userid"),
     });
+
+    console.log(response);
+    if (response.payload.status !== 200) {
+      const error_message = response.payload.message;
+      console.error(error_message);
+    }
+
+    console.log();
     //if fulfilled navigat to home
     if (response.type === "products/addAsyncThunk/fulfilled") {
-      navigate("/");
+      //navigate("/");
+      console.log("yeah");
     }
   };
   return (
     <>
       <FarmersNav />
-      <div >
-        <div >
+      <div>
+        <div>
           <h1>Create product</h1>
           <form
             onSubmit={handleSubmit((product) => {
               //create a new product in db after vallidation
+
               createAproduct(product);
             })}
           >
             <fieldset>
               {/* name */}
-              <div >
+              <div>
                 <label htmlFor="pname">Product name:</label>
                 <input
                   id="pname"
@@ -95,10 +109,11 @@ function Create() {
                   name="name"
                   type="text"
                   {...register("name", { required: true, maxLength: 200 })}
+                  required
                 />
               </div>
               {/* price */}
-              <div >
+              <div>
                 <label htmlFor="pprice">Product Price:</label>
                 <input
                   id="pprice"
@@ -106,11 +121,26 @@ function Create() {
                   type="number"
                   name="price"
                   {...register("price", { required: true, maxLength: 10000 })}
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="pprice">Product quantity(kg):</label>
+                <input
+                  id="quantity"
+                  placeholder="quantity"
+                  type="number"
+                  name="quantity"
+                  {...register("quantity", {
+                    required: true,
+                  })}
+                  required
                 />
               </div>
               {/* size */}
 
-              <div >
+              <div>
                 <label htmlFor="s">Product quantity:</label>
 
                 <input
@@ -139,7 +169,7 @@ function Create() {
                 <label htmlFor="l">L</label>
               </div>
               {/* Description */}
-              <div >
+              <div>
                 <label htmlFor="pcolor">Product Description:</label>
                 <input
                   id="pcolor"
@@ -168,7 +198,7 @@ function Create() {
                 />
                 <label htmlFor="fruit">FRUITS</label>
               </div>
-                {/* image */}
+              {/* image */}
               <div>
                 <label htmlFor="pUrl">Product image url:</label>
                 <input
@@ -183,12 +213,11 @@ function Create() {
 
               <button
                 type="submit"
+                // handles submit aciton
 
-                // handles submit aciton 
-
-
-                onClick={() => {
+                onClick={(e) => {
                   //form validation
+
                   if (
                     errors.url ||
                     errors.description ||
@@ -196,7 +225,7 @@ function Create() {
                     errors.veg ||
                     errors.price
                   ) {
-                    //if not filled 
+                    //if not filled
                     toast.warn("fill all feald", {
                       autoClose: 600,
                       theme: "colored",
@@ -208,7 +237,7 @@ function Create() {
               </button>
             </fieldset>
           </form>
-          
+
           {/* to send notification */}
           <ToastContainer />
         </div>

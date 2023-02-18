@@ -20,20 +20,25 @@ export const fetchAsyncThunk = createAsyncThunk(
 
 // to add a new products to db
 export const addAsyncThunk = createAsyncThunk(
-
   "products/addAsyncThunk",
   async (productdata) => {
-    const requestOptions={
+    const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify( productdata),
-    }
+      body: JSON.stringify(productdata),
+    };
 
     const response = await fetch(
-      "http://localhost:5000/api/products/",
+      process.env.REACT_APP_BACKEND_URL + "/api/product",
       requestOptions
     );
     const data = await response.json();
+
+    if (data.status !== 200) {
+      var err = new Error();
+      err.message = "lol";
+      throw err;
+    }
     return data;
   }
 );
@@ -73,10 +78,7 @@ export const deleteFromFavAsyncThunk = createAsyncThunk(
     };
 
     let id = product.id;
-    const response = await fetch(
-      `/cart/${id}`,
-      requestOptions
-    );
+    const response = await fetch(`/cart/${id}`, requestOptions);
     const data = await response.json();
     return id;
   }
@@ -90,10 +92,7 @@ export const getMovieAsyncThunk = createAsyncThunk(
       headers: { "Content-Type": "application/json" },
     };
 
-    const response = await fetch(
-      `/api/products/${id}`,
-      requestOptions
-    );
+    const response = await fetch(`/api/products/${id}`, requestOptions);
     const data = await response.json();
     return data;
   }
@@ -105,10 +104,7 @@ export const deleteProductAsyncThunk = createAsyncThunk(
     const requestOptions = {
       method: "DELETE",
     };
-    const response = await fetch(
-      `/api/products/${id}`,
-      requestOptions
-    );
+    const response = await fetch(`/api/products/${id}`, requestOptions);
     const data = await response.json();
     return data;
   }
@@ -133,12 +129,15 @@ const productSlice = createSlice({
     },
 
     [addAsyncThunk.fulfilled]: (state, { payload }) => {
+      console.log("thunk payload:", payload);
       state.products.push(payload);
       toast.success("Creared a product", { theme: "dark", autoClose: 600 });
       return state;
     },
 
     [addAsyncThunk.rejected]: (state, { payload }) => {
+      const error_message = payload.message;
+      toast.success(error_message, { theme: "dark", autoClose: 600 });
       return state;
     },
 
@@ -172,7 +171,7 @@ export const getAllProducts = (state) => {
   };
 
   const allproducts = state.products.products;
-  
+
   // to send all products from state;
   if (allproducts != undefined) {
     allproducts.map((product) => {
