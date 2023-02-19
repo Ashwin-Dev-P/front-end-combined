@@ -52,7 +52,6 @@ function Home() {
   return (
     <>
       <ConsumerNavbar />
-      <Header />
       <div>
         {/* tab components show the product sessions */}
         <Tabs setShowMensT={setShowMensT} showMensT={showMensT} />

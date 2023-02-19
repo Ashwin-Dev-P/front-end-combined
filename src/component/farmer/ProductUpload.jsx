@@ -32,7 +32,7 @@ const defaultValues = {
   tenkg: "true",
   url: "",
   quantity: 1,
-  farmer_id: sessionStorage.getItem("userid"),
+  farmer_id: sessionStorage.getItem("_id"),
 };
 
 function Create() {
@@ -89,8 +89,8 @@ function Create() {
   return (
     <>
       <FarmersNav />
-      <div>
-        <div>
+      <main className="main">
+        <div className="create__product--container">
           <h1>Create product</h1>
           <form
             onSubmit={handleSubmit((product) => {
@@ -233,7 +233,7 @@ function Create() {
                   }
                 }}
               >
-                submit
+                Upload +
               </button>
             </fieldset>
           </form>
@@ -241,7 +241,7 @@ function Create() {
           {/* to send notification */}
           <ToastContainer />
         </div>
-      </div>
+      </main>
     </>
   );
 }

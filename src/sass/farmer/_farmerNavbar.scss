@@ -2,10 +2,9 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    max-width: 1440px;
-    margin-right: 50px;
-
     padding: 25px 0;
+    padding-right: 100px;
+
     &--items {
         font-size: 1.2rem;
         color: black;

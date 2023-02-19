@@ -9,7 +9,7 @@ const ConsumerDashboard = () => {
         <p className="consumer-dashboard_body--smallcontent">
           Shop Your Produce As Farm Fresh Online!
         </p>
-        <Link to={'consumer-Dash'} className="shop-btn"> Shop Now!</Link>
+        <Link to={'/consumer/shop'} className="shop-btn"> Shop Now!</Link>
       </div>
     </section>
   )

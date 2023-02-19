@@ -26,8 +26,6 @@ function App() {
           <Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
           <Route path="/consumer/shop" element={<ShopProducts />}></Route>
           <Route path="/detail/:id" element={<CartCard />}></Route>
-
-
           <Route
             path="/farmer/product-upload"
             element={<ProductUpload />}

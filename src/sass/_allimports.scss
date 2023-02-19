@@ -10,8 +10,10 @@
 @use 'consumer/consumerLanding';
 @use 'consumer/consumerDash';
 @use 'consumer/consumerNav';
+@use 'consumer/consumerProfile';
 
 // FARMER
 @use 'farmer/farmerNavbar';
 @use 'farmer/farmerDash';
 @use 'farmer/upload';
+@use 'farmer/farmersProfile';
