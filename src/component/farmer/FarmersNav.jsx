@@ -18,7 +18,7 @@ const FarmersNav = () => {
 
   return (
     <nav className="farmers-Nav">
-      {/* <Link to={'/farmer/home'} className="farmers-Nav--items">Home</Link> */}
+      <Link to={'/farmer-Dash'} className="farmers-Nav--items">Home</Link>
       <Link to={"/farmer/product-upload"} className="farmers-Nav--items">
         Upload Produce
       </Link>
