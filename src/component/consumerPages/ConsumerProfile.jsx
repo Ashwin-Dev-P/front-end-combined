@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import ConsumerNavbar from './ConsumerNavbar';
+import React, { useState, useEffect } from "react";
+import ConsumerNavbar from "./ConsumerNavbar";
 
 function ConsumerProfile() {
   const [user, setUser] = useState({});
@@ -15,16 +15,16 @@ function ConsumerProfile() {
   console.log(user.email);
   return (
     <section>
-            <ConsumerNavbar />
-            <div className="consumer-profile_body">
-            <div className="consumer-profile_body--content">
-                <h1>Personal Information</h1>
-                <p className="name">Name: {user.username}</p>
-                <p className="name">Email ID: {user.email}</p>
-                <p className="name">Phone: {user.phone}</p>
-                <p className="name">Address: {user.address}</p>
-            </div>
-            </div>
+      <ConsumerNavbar />
+      <div className="consumer-profile_body">
+        <div className="consumer-profile_body--content">
+          <h1>Personal Information</h1>
+          <p className="name">Name: {user.username}</p>
+          <p className="name">Email ID: {user.email}</p>
+          <p className="name">Phone: {user.phone_number}</p>
+          <p className="name">Address: {user.address}</p>
+        </div>
+      </div>
     </section>
   );
 }

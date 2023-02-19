@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import FarmersNav from "./FarmersNav";
 
 function FarmersProfile() {
@@ -16,14 +15,14 @@ function FarmersProfile() {
   console.log(user.email);
   return (
     <section className="farmer-profile_body">
-            <FarmersNav />
-            <div className="farmer-profile_body--content">
-                <h1>Personal Information</h1>
-                <p className="name">Name: {user.username}</p>
-                <p className="name">Email ID: {user.email}</p>
-                <p className="name">Phone: {user.phone}</p>
-                <p className="name">Address: {user.address}</p>
-            </div>
+      <FarmersNav />
+      <div className="farmer-profile_body--content">
+        <h1>Personal Information</h1>
+        <p className="name">Name: {user.username}</p>
+        <p className="name">Email ID: {user.email}</p>
+        <p className="name">Phone: {user.phone_number}</p>
+        <p className="name">Address: {user.address}</p>
+      </div>
     </section>
   );
 }

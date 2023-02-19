@@ -56,7 +56,7 @@ const Register = () => {
       password,
       password_confirmation,
       email,
-      phone,
+      phone_number: phone,
       country,
       address,
       gender,
