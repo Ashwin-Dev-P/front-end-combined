@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class ProductItem extends Component {
   render(product) {
-    const { name, quantity, price, description, image } = this.props.product;
+    const { name, quantity, price, description, image, _id } =
+      this.props.product;
     return (
       <div className="card col-xs-12 col-md-4 my-5">
         <img className="card-img-top" src={image} alt={name} />
@@ -11,9 +13,10 @@ export default class ProductItem extends Component {
           <div>Quantity: {quantity}</div>
           <div>Price: {price}</div>
           <p className="card-text">{description}</p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
+
+          <Link className="btn btn-primary" to={`/detail/${_id}`}>
+            View
+          </Link>
         </div>
       </div>
     );

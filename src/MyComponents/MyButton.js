@@ -5,10 +5,10 @@ export default class MyButton extends Component {
     super(props);
   }
   render() {
-    const { text, onClick, className } = this.props;
+    const { text, onClick, className, disabled } = this.props;
     return (
       <>
-        <button onClick={onClick} className={className}>
+        <button onClick={onClick} className={className} disabled={disabled}>
           {text}
         </button>
       </>
