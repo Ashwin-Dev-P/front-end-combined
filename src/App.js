@@ -11,6 +11,7 @@ import ConsumerProfile from "./component/consumerPages/ConsumerProfile";
 import FarmersProfile from "./component/farmer/FarmersProfile";
 
 import ProductDetails from "./components/ProductDetails";
+import Cart from "./component/consumerPages/Cart";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
             path="/farmer/product-upload"
             element={<ProductUpload />}
           ></Route>
+
+          <Route path="/consumer/cart" element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
