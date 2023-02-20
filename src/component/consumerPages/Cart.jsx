@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import ConsumerNavbar from "./ConsumerNavbar";
 import CartItem from "../../components/CartItem";
+import '../../css/index.css';
 
 export default class Cart extends Component {
   constructor(props) {

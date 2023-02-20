@@ -99,7 +99,7 @@ const Login = () => {
   };
   return (
     <div className="row">
-      <div className="offset-lg-3 col-lg-6" style={{ marginTop: "100px" }}>
+      <div className="offset-lg-3 col-lg-6" style={{ marginTop: "260px" }}>
         <form onSubmit={ProceedLogin} className="container">
           <div className="card">
             <div className="card-header">

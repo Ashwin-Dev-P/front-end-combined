@@ -5,8 +5,7 @@
 }
 
 .cardsContainer {
-  width: 100vw;
-  max-width: 1200px;
+  width: 400px;
   padding: 15px;
   margin: 0px auto;
   display: flex;

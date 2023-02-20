@@ -4,6 +4,10 @@
 // HOMEPAGE
 @use 'homepage/homeNavbar';
 @use 'homepage/homeBody';
+@use 'homepage/homeFooter';
+
+// CREDENTIALS
+@use 'login';
 
 
 // CONSUMER
@@ -11,6 +15,7 @@
 @use 'consumer/consumerDash';
 @use 'consumer/consumerNav';
 @use 'consumer/consumerProfile';
+@use 'consumer/cart';
 
 // FARMER
 @use 'farmer/farmerNavbar';
