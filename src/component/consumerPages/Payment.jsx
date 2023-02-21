@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Payment = () => {
-    
+
   return (
 <div class="row my-5">
       <div class="col-md-4 offset-md-4">
         <div class="card">
           <div class="card-body">
-            <form class="" action="http://localhost:1234/paynow" method="post" >
+            <form class="" action="http://localhost:5000/api/payment/paynow" method="post" >
               <div class="form-group">
                 <input class="form-control" type="text" name="name" id='name' required placeholder="Enter your Name" />
               </div>
