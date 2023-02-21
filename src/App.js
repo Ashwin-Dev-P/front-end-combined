@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import FarmersLanding from "./component/FarmersLanding";
@@ -12,6 +12,7 @@ import FarmersProfile from "./component/farmer/FarmersProfile";
 
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./component/consumerPages/Cart";
+import Payment from "./component/consumerPages/Payment";
 
 function App() {
   return (
@@ -32,9 +33,13 @@ function App() {
             path="/farmer/product-upload"
             element={<ProductUpload />}
           ></Route>
-
-          <Route path="/consumer/cart" element={<Cart />}></Route>
+        {/* Payment+++++++++++++++++++++ */}
+          <Route path="/consumer/payment" element={<Payment />}></Route>
+        {/* ++++++++++++++++++++++++++++ */}
+        <Route path="/consumer/cart" element={<Cart />}></Route>
         </Routes>
+
+
       </BrowserRouter>
     </div>
   );
