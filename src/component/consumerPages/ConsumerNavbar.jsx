@@ -38,6 +38,13 @@ const ConsumerNavbar = () => {
 					Address book
 				</Link>
 
+				<Link
+					to={"/consumer/order_history"}
+					className="consumer-navbar--links_item"
+				>
+					Order history
+				</Link>
+
 				<MyButton
 					text="logout"
 					className="btn btn-danger consumer-navbar--links_item"
