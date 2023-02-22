@@ -15,39 +15,43 @@ import Cart from "./component/consumerPages/Cart";
 import Payment from "./component/consumerPages/Payment";
 import Callback from "./component/consumerPages/Callback";
 import SearchByFarmers from "./component/consumerPages/SearchByFarmers";
+import FarmerShop from "./component/consumerPages/FarmerShop";
 
 function App() {
-  return (
-    <div className="App">
-      <ToastContainer theme="colored" position="top-center"></ToastContainer>
-      <BrowserRouter>
-        <Routes>
-          <Route path="" element={<Homepage />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/farmer-Dash" element={<FarmersLanding />}></Route>
-          <Route path="/consumer-Dash" element={<ConsumerLanding />}></Route>
-          <Route path="/consumer/Profile" element={<ConsumerProfile />}></Route>
-          <Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
-          <Route path="/consumer/shop" element={<ShopProducts />}></Route>
-          <Route path="/consumer/farmers" element={<SearchByFarmers />}></Route>
+	return (
+		<div className="App">
+			<ToastContainer theme="colored" position="top-center"></ToastContainer>
+			<BrowserRouter>
+				<Routes>
+					<Route path="" element={<Homepage />}></Route>
+					<Route path="/login" element={<Login />}></Route>
+					<Route path="/register" element={<Register />}></Route>
+					<Route path="/farmer-Dash" element={<FarmersLanding />}></Route>
+					<Route path="/consumer-Dash" element={<ConsumerLanding />}></Route>
+					<Route path="/consumer/Profile" element={<ConsumerProfile />}></Route>
+					<Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
+					<Route path="/consumer/shop" element={<ShopProducts />}></Route>
+					<Route path="/consumer/farmers" element={<SearchByFarmers />}></Route>
 
-          <Route path="/detail/:id" element={<ProductDetails />}></Route>
-          <Route path = "/callback" element={<Callback />}></Route>
-          <Route
-            path="/farmer/product-upload"
-            element={<ProductUpload />}
-          ></Route>
-        {/* Payment+++++++++++++++++++++ */}
-          <Route path="/consumer/payment" element={<Payment />}></Route>
-        {/* ++++++++++++++++++++++++++++ */}
-        <Route path="/consumer/cart" element={<Cart />}></Route>
-        </Routes>
+					<Route path="/detail/:id" element={<ProductDetails />}></Route>
+					<Route path="/callback" element={<Callback />}></Route>
+					<Route
+						path="/farmer/product-upload"
+						element={<ProductUpload />}
+					></Route>
+					{/* Payment+++++++++++++++++++++ */}
+					<Route path="/consumer/payment" element={<Payment />}></Route>
+					{/* ++++++++++++++++++++++++++++ */}
+					<Route path="/consumer/cart" element={<Cart />}></Route>
 
-
-      </BrowserRouter>
-    </div>
-  );
+					<Route
+						path="consumer/farmer/:farmer_id"
+						element={<FarmerShop />}
+					></Route>
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
