@@ -122,10 +122,11 @@ export default class Cart extends Component {
 							})}
 						</div>
 						<div className="text-center">
-							<MyButton onClick={this.submitOrder} text="Pay now" />
-							<Link to={"/consumer/payment"} className="btn btn-primary">
-								Pay now
-							</Link>
+							<MyButton
+								onClick={this.submitOrder}
+								className="btn btn-primary"
+								text="Pay now"
+							/>
 						</div>
 					</div>
 				</div>
