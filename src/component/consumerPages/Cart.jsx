@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ConsumerNavbar from "./ConsumerNavbar";
 import CartItem from "../../components/CartItem";
 import '../../css/index.css';
+import { Link } from "react-router-dom";
 
 export default class Cart extends Component {
   constructor(props) {
@@ -65,6 +66,9 @@ export default class Cart extends Component {
               {this.state.products.map((product) => {
                 return <CartItem product={product} key={product._id} />;
               })}
+            </div>
+            <div className="text-center">
+            <Link to={"/consumer/payment"} className="btn btn-primary">Pay now</Link>
             </div>
           </div>
         </div>

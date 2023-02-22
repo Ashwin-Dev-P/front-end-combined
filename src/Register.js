@@ -79,7 +79,7 @@ const Register = () => {
             err.message = res.message;
             throw err;
           }
-
+          console.log(res);
           const userid = res.user._id;
           const jwt = res.jwt;
           const username = res.user.username;

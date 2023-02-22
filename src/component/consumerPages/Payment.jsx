@@ -18,7 +18,7 @@ const Payment = () => {
                 <input class="form-control" type="number" name="phone" id='phone' required placeholder="Enter your mobile number" />
               </div>
                 <div class="form-group">
-                <input class="form-control" type="number" name="amount" id='amount' required placeholder="Amount" />
+                <input class="form-control" type="number" name="amount" id='amount' required placeholder="Amount" value={sessionStorage.getItem("total_price")} disabled />
               </div>
               <div class="form-group">
                 <input class="form-control" type="text" name="message" id='message' placeholder="Message" />

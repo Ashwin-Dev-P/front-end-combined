@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import FarmersLanding from "./component/FarmersLanding";
@@ -13,6 +13,7 @@ import FarmersProfile from "./component/farmer/FarmersProfile";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./component/consumerPages/Cart";
 import Payment from "./component/consumerPages/Payment";
+import Callback from "./component/consumerPages/Callback";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
           <Route path="/consumer/shop" element={<ShopProducts />}></Route>
           <Route path="/detail/:id" element={<ProductDetails />}></Route>
+          <Route path = "/callback" element={<Callback />}></Route>
           <Route
             path="/farmer/product-upload"
             element={<ProductUpload />}
