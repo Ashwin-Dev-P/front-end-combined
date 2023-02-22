@@ -18,6 +18,7 @@ import SearchByFarmers from "./component/consumerPages/SearchByFarmers";
 import FarmerShop from "./component/consumerPages/FarmerShop";
 import Addressbook from "./component/consumerPages/Addressbook";
 import OrderHistory from "./component/consumerPages/orders/OrderHistory";
+import OrderHistoryFarmer from "./component/farmer/OrderHistory";
 import OrderStatus from "./component/consumerPages/orders/OrderStatus";
 
 function App() {
@@ -42,6 +43,12 @@ function App() {
 						path="/farmer/product-upload"
 						element={<ProductUpload />}
 					></Route>
+
+					<Route
+						path="/farmer/order_history"
+						element={<OrderHistoryFarmer />}
+					></Route>
+
 					{/* Payment+++++++++++++++++++++ */}
 					<Route path="/consumer/payment" element={<Payment />}></Route>
 					{/* ++++++++++++++++++++++++++++ */}
