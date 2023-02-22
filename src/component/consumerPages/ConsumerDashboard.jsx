@@ -10,6 +10,7 @@ const ConsumerDashboard = () => {
           Shop Your Produce As Farm Fresh Online!
         </p>
         <Link to={'/consumer/shop'} className="shop-btn"> Shop Now!</Link>
+        <Link to={"/consumer/farmers"} className="shop-btn mt-3 ">Search by farmers</Link>
       </div>
     </section>
   )

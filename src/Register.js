@@ -11,7 +11,7 @@ const Register = () => {
   const [phone, phonechange] = useState("");
   const [country, countrychange] = useState("india");
   const [address, addresschange] = useState("");
-  const [gender, genderchange] = useState("female");
+  
   const [userType, userTypechange] = useState("");
 
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const Register = () => {
       phone_number: phone,
       country,
       address,
-      gender,
+      
       type: Number(userType),
     };
     if (IsValidate()) {
@@ -218,32 +218,8 @@ const Register = () => {
                     ></textarea>
                   </div>
                 </div>
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <label>Gender</label>
-                    <br></br>
-                    <input
-                      type="radio"
-                      checked={gender === "male"}
-                      required
-                      onChange={(e) => genderchange(e.target.value)}
-                      name="gender"
-                      value="male"
-                      className="app-check"
-                    ></input>
-                    <label>Male</label>
-                    <input
-                      type="radio"
-                      checked={gender === "female"}
-                      required
-                      onChange={(e) => genderchange(e.target.value)}
-                      name="gender"
-                      value="female"
-                      className="app-check"
-                    ></input>
-                    <label>Female</label>
-                  </div>
-                </div>
+                
+                      
                 <div>
                   <div>
                     <label>User Type</label>

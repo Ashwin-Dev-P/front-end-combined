@@ -14,6 +14,7 @@ import ProductDetails from "./components/ProductDetails";
 import Cart from "./component/consumerPages/Cart";
 import Payment from "./component/consumerPages/Payment";
 import Callback from "./component/consumerPages/Callback";
+import SearchByFarmers from "./component/consumerPages/SearchByFarmers";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="/consumer/Profile" element={<ConsumerProfile />}></Route>
           <Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
           <Route path="/consumer/shop" element={<ShopProducts />}></Route>
+          <Route path="/consumer/farmers" element={<SearchByFarmers />}></Route>
+
           <Route path="/detail/:id" element={<ProductDetails />}></Route>
           <Route path = "/callback" element={<Callback />}></Route>
           <Route
