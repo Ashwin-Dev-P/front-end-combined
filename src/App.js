@@ -16,6 +16,7 @@ import Payment from "./component/consumerPages/Payment";
 import Callback from "./component/consumerPages/Callback";
 import SearchByFarmers from "./component/consumerPages/SearchByFarmers";
 import FarmerShop from "./component/consumerPages/FarmerShop";
+import Addressbook from "./component/consumerPages/Addressbook";
 
 function App() {
 	return (
@@ -47,6 +48,10 @@ function App() {
 					<Route
 						path="consumer/farmer/:farmer_id"
 						element={<FarmerShop />}
+					></Route>
+					<Route
+						path="/consumer/address_book"
+						element={<Addressbook />}
 					></Route>
 				</Routes>
 			</BrowserRouter>
