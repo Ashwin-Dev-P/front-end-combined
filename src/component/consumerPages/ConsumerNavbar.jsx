@@ -44,6 +44,12 @@ const ConsumerNavbar = () => {
 				>
 					Order history
 				</Link>
+				<Link
+					to={"/consumer/order_status"}
+					className="consumer-navbar--links_item"
+				>
+					Order status
+				</Link>
 
 				<MyButton
 					text="logout"

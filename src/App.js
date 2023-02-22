@@ -18,6 +18,7 @@ import SearchByFarmers from "./component/consumerPages/SearchByFarmers";
 import FarmerShop from "./component/consumerPages/FarmerShop";
 import Addressbook from "./component/consumerPages/Addressbook";
 import OrderHistory from "./component/consumerPages/orders/OrderHistory";
+import OrderStatus from "./component/consumerPages/orders/OrderStatus";
 
 function App() {
 	return (
@@ -58,6 +59,11 @@ function App() {
 					<Route
 						path="/consumer/order_history"
 						element={<OrderHistory />}
+					></Route>
+
+					<Route
+						path="/consumer/order_status"
+						element={<OrderStatus />}
 					></Route>
 				</Routes>
 			</BrowserRouter>

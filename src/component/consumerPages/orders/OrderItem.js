@@ -22,7 +22,13 @@ export default class OrderItem extends Component {
 					{status === 2 ? (
 						<div className="btn btn-success mt-3">Delivered</div>
 					) : (
-						<div className="danger">pending</div>
+						<>
+							{status == 1 ? (
+								<div className="btn btn-warning mt-3">shipment</div>
+							) : (
+								<div className="btn btn-danger mt-3">processing</div>
+							)}
+						</>
 					)}
 				</div>
 			</div>
