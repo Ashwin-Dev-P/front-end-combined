@@ -23,6 +23,7 @@ import OrderStatus from "./component/consumerPages/orders/OrderStatus";
 import Report from "./component/farmer/Report";
 import AdminDash from "./component/adminPages/AdminDash";
 import ViewConsumers from "./component/adminPages/ViewConsumers";
+import ViewFarmers from "./component/adminPages/ViewFarmers";
 
 function App() {
 	return (
@@ -38,6 +39,7 @@ function App() {
 
 					<Route path="/admin-Dash" element={<AdminDash />}></Route>
 					<Route path="/admin/consumers" element={<ViewConsumers />}></Route>
+					<Route path="/admin/farmers" element={<ViewFarmers />}></Route>
 
 					<Route path="/consumer/Profile" element={<ConsumerProfile />}></Route>
 					<Route path="/farmer/Profile" element={<FarmersProfile />}></Route>

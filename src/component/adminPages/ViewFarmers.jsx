@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FarmerAddressItem from "../../components/FarmerAddressItem";
 import AdminNav from "./AdminNav";
-import UserItem from "./UserItem";
+import UserItemFarmer from "./UserItemFarmer";
 
 export default class ViewConsumers extends Component {
 	constructor(props) {
@@ -16,7 +16,7 @@ export default class ViewConsumers extends Component {
 		this.getConsumers();
 	}
 	getConsumers() {
-		const url = process.env.REACT_APP_BACKEND_URL + "/api/user/consumers";
+		const url = process.env.REACT_APP_BACKEND_URL + "/api/user/farmers";
 
 		fetch(url, {
 			method: "GET",
@@ -27,7 +27,7 @@ export default class ViewConsumers extends Component {
 				console.log(res.order_history);
 				if (res.status === 200) {
 					this.setState({
-						consumers: res.consumers,
+						consumers: res.farmers,
 					});
 				}
 			});
@@ -39,11 +39,12 @@ export default class ViewConsumers extends Component {
 				<AdminNav />
 				<div className="container">
 					<div className="text-center">
-						<h1>Consumers</h1>
+						<h1>Farmers</h1>
 					</div>
+
 					<div className="row">
 						{this.state.consumers.map((consumer) => {
-							return <UserItem consumer={consumer} key={consumer._id} />;
+							return <UserItemFarmer consumer={consumer} key={consumer._id} />;
 						})}
 					</div>
 				</div>

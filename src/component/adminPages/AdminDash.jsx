@@ -8,9 +8,18 @@ export default class AdminDash extends Component {
 			<div>
 				<AdminNav />
 				<div className="container text-center mt-5">
-					<Link to={"/admin/consumers"} className="btn btn-primary">
-						View consumers
-					</Link>
+					<div className="row">
+						<div className="my-2">
+							<Link to={"/admin/consumers"} className="btn btn-primary w-75">
+								View consumers
+							</Link>
+						</div>
+						<div className="my-2">
+							<Link to={"/admin/farmers"} className="btn btn-primary w-75">
+								View farmers
+							</Link>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
