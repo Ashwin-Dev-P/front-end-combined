@@ -94,7 +94,7 @@ export default class Report extends Component {
 						<h2 className="text-center">SHOP REPORTS</h2>
 					</div>
 					<div className="row justify-content-center">
-						<div className="col-xs-12 col-md-6 col-lg-4">
+						<div className="col-xs-12 col-md-8 col-lg-9">
 							<Bar options={config} data={data} />
 						</div>
 					</div>
