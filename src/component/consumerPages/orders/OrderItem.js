@@ -15,9 +15,11 @@ export default class OrderItem extends Component {
 				</div>
 				<div className="row mx-1">
 					<div className="mb-3">Items purchased:</div>
+					<div className="row">
 					{product_ids.map((product) => {
 						return <ProductItem product={product} key={product._id} />;
 					})}
+					</div>
 
 					{status === 2 ? (
 						<div className="btn btn-success mt-3">Delivered</div>
