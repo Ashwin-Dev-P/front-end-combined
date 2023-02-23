@@ -313,7 +313,7 @@
   flex-direction: column;
   align-self: center;
   margin-top: 90px;
-  padding: 50px 100px;
+  padding: 50px 80px;
   border-radius: 10px;
   color: white;
   background: linear-gradient(to right, rgba(48, 114, 22, 0.842), rgba(61, 151, 26, 0.842), rgba(77, 133, 60, 0.842));
@@ -321,6 +321,9 @@
 .farmer-profile_body--content p {
   font-size: 1.19rem;
   font-weight: 500;
+}
+.farmer-profile_body .input {
+  width: 300px !important;
 }
 
 .farmers-Nav {
@@ -343,6 +346,23 @@
   color: rgb(0, 136, 0);
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  .navbar-collapse.show {
+    display: block;
+  }
+}
 .farmers-Dash {
   height: 100vh;
   background-repeat: no-repeat;
@@ -359,13 +379,16 @@
   justify-content: center;
   align-items: center;
   margin-top: 12%;
-  height: 300px;
-  width: 900px;
+  padding: 100px 50px;
+  text-align: center;
   color: black;
   background-color: rgba(255, 255, 255, 0.507);
 }
 .farmers-Dash-btn h1, .farmers-Dash-btn h2 {
   margin-bottom: 15px;
+}
+.farmers-Dash-btn h1 {
+  text-decoration: underline;
 }
 .farmers-Dash-btn .button {
   display: flex;
@@ -388,6 +411,16 @@
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 1000px) {
+  .farmers-Dash-btn {
+    padding: 90px 15px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .farmers-Dash-btn {
+    padding: 50px;
+  }
+}
 .create__product--container {
   color: black;
   display: flex;
@@ -429,6 +462,14 @@
   height: 90.5vh;
 }
 
+@media screen and (min-width: 300px) {
+  .create__product--container fieldset {
+    padding: 50px 40px;
+  }
+  .create__product--container fieldset div {
+    display: block;
+  }
+}
 .consumer-profile_body {
   display: flex;
   flex-direction: column;

@@ -13,16 +13,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // row-gap: 15px;
     margin-top: 12%;
-    // padding: 50px 100px;
-    height: 300px;
-    width: 900px;
+    padding: 100px 50px;
+    text-align: center;
     color: black;
     background-color: rgba(255, 255, 255, 0.507);
 
     h1, h2 {
         margin-bottom: 15px;
+    }
+    h1 {
+        text-decoration: underline;
     }
 
     .button {
@@ -46,5 +47,17 @@
             border: 2px solid darkgreen;
             text-decoration: underline;
         }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .farmers-Dash-btn {
+        padding: 90px 15px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .farmers-Dash-btn {
+        padding: 50px;
     }
 }

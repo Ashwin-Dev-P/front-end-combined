@@ -6,7 +6,7 @@ export default class FarmerAddressItem extends Component {
 			this.props.farmer;
 		console.log(this.props);
 		return (
-			<div className="my-5">
+			<div className="my-5 border border-success border-3 p-3">
 				<table className="table table-bordered">
 					<tr>
 						<th scope="row">Name</th>
