@@ -9,3 +9,16 @@
         font-size: 2rem;
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+    .home-footer {
+
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        transition: 1s;
+    }
+}

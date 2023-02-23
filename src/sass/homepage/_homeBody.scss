@@ -41,3 +41,32 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .home-body {
+        &_about {
+
+            &-info {
+                font-weight: 700;
+                text-align: center;
+                padding: 50px 10px 20px ;
+                border-radius: 5px;
+            }
+        }
+
+        &_sign-btn {
+            padding: 10px 30px;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .home-body {
+        &_about {
+
+            &-info {
+                padding: 40px 70px 30px;
+            }
+        }
+    }
+}

@@ -44,3 +44,32 @@
     width: 130px;
     height: 105px;
 }
+
+@media only screen and (max-width: 600px) {
+    .home-nav {
+
+
+        &_logo {
+            position: relative;
+            left: -80px;
+
+            h1 {
+
+                font-size: 1.6rem;
+            }
+
+        }
+
+        &_links--item {
+            position: relative;
+            right: -50px;
+        }
+        transition: 2s;
+    }
+
+    .agro-img {
+        width: 100px;
+        height: 80px;
+    }
+
+}

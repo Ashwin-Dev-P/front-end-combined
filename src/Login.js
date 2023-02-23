@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+
 const Login = () => {
-  const [username, usernameupdate] = useState("");
+
+
+    const [username, usernameupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
   const usenavigate = useNavigate();
@@ -97,52 +100,51 @@ const Login = () => {
     }
     return result;
   };
-  return (
-    <div className="row">
-      <div className="offset-lg-3 col-lg-6" style={{ marginTop: "260px" }}>
-        <form onSubmit={ProceedLogin} className="container">
-          <div className="card">
-            <div className="card-header">
-              <h2>Login</h2>
-            </div>
-            <div className="card-body">
-              <div className="form-group">
-                <label>
+
+
+
+
+  return(
+    <section className="login">
+      <h1 className="greet">Welcome to AgroMart Login</h1>
+      <form onSubmit={ProceedLogin} className="login-container">
+          <h3 className="login-text">Login</h3>
+          <div className="login-creds">
+          <div className="mail">
+              <label htmlFor="label" className="mail-label">
                   Email <span className="errmsg">*</span>
-                </label>
-                <input
-                  value={username}
-                  onChange={(e) => usernameupdate(e.target.value)}
-                  className="form-control"
-                  type="email"
-                ></input>
-              </div>
-              <div className="form-group">
-                <label>
+              </label>
+              <input
+              value={username}
+              onChange={(e) => usernameupdate(e.target.value)}
+              className="mail-input"
+              type="email"
+              />
+          </div>
+          <div className="pass">
+              <label htmlFor="label" className="pass-label">
                   Password <span className="errmsg">*</span>
-                </label>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => passwordupdate(e.target.value)}
-                  className="form-control"
-                ></input>
-              </div>
-            </div>
-            <div className="card-footer">
-              <button type="submit" className="btn btn-primary">
-                Login
+              </label>
+              <input
+              type="password"
+              value={password}
+              onChange={(e) => passwordupdate(e.target.value)}
+              className="pass-input"
+              />
+          </div>
+          </div>
+          <div className="login-buttons">
+          <button type="submit" className="btn btn-primary">
+                  Login
               </button>{" "}
               |
               <Link className="btn btn-success" to={"/register"}>
-                New User
+                  New User
               </Link>
-            </div>
           </div>
-        </form>
-      </div>
-    </div>
-  );
+      </form>
+    </section>
+  ); 
 };
 
 export default Login;
