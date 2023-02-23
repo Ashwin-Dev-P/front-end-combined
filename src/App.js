@@ -20,6 +20,7 @@ import Addressbook from "./component/consumerPages/Addressbook";
 import OrderHistory from "./component/consumerPages/orders/OrderHistory";
 import OrderHistoryFarmer from "./component/farmer/OrderHistory";
 import OrderStatus from "./component/consumerPages/orders/OrderStatus";
+import Report from "./component/farmer/Report";
 
 function App() {
 	return (
@@ -34,6 +35,7 @@ function App() {
 					<Route path="/consumer-Dash" element={<ConsumerLanding />}></Route>
 					<Route path="/consumer/Profile" element={<ConsumerProfile />}></Route>
 					<Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
+					<Route path="/farmer/reports" element={<Report />}></Route>
 					<Route path="/consumer/shop" element={<ShopProducts />}></Route>
 					<Route path="/consumer/farmers" element={<SearchByFarmers />}></Route>
 

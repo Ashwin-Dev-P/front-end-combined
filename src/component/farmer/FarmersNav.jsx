@@ -27,6 +27,9 @@ const FarmersNav = () => {
 			<Link to={"/farmer/profile"} className="farmers-Nav--items">
 				Profile
 			</Link>
+			<Link to={"/farmer/reports"} className="farmers-Nav--items">
+				Report
+			</Link>
 			<Link to={"/farmer/order_history"} className="farmers-Nav--items">
 				Orders
 			</Link>
