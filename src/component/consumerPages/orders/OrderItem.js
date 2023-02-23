@@ -13,7 +13,7 @@ export default class OrderItem extends Component {
 					<div className="py-2">Order ID: {_id}</div>
 					<div className="py-2">Date: {createdAt}</div>
 				</div>
-				<div>
+				<div className="row mx-1">
 					<div className="mb-3">Items purchased:</div>
 					{product_ids.map((product) => {
 						return <ProductItem product={product} key={product._id} />;
