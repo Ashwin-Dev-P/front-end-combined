@@ -21,6 +21,8 @@ import OrderHistory from "./component/consumerPages/orders/OrderHistory";
 import OrderHistoryFarmer from "./component/farmer/OrderHistory";
 import OrderStatus from "./component/consumerPages/orders/OrderStatus";
 import Report from "./component/farmer/Report";
+import AdminDash from "./component/adminPages/AdminDash";
+import ViewConsumers from "./component/adminPages/ViewConsumers";
 
 function App() {
 	return (
@@ -33,6 +35,10 @@ function App() {
 					<Route path="/register" element={<Register />}></Route>
 					<Route path="/farmer-Dash" element={<FarmersLanding />}></Route>
 					<Route path="/consumer-Dash" element={<ConsumerLanding />}></Route>
+
+					<Route path="/admin-Dash" element={<AdminDash />}></Route>
+					<Route path="/admin/consumers" element={<ViewConsumers />}></Route>
+
 					<Route path="/consumer/Profile" element={<ConsumerProfile />}></Route>
 					<Route path="/farmer/Profile" element={<FarmersProfile />}></Route>
 					<Route path="/farmer/reports" element={<Report />}></Route>

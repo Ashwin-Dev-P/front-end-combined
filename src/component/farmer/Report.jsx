@@ -91,9 +91,13 @@ export default class Report extends Component {
 				<FarmersNav />
 				<div className="container mt-5">
 					<div className="my-3">
-						<h2 className="text-center">Shop Reports</h2>
+						<h2 className="text-center">SHOP REPORTS</h2>
 					</div>
-					<Bar options={config} data={data} />
+					<div className="row justify-content-center">
+						<div className="col-xs-12 col-md-6 col-lg-4">
+							<Bar options={config} data={data} />
+						</div>
+					</div>
 				</div>
 			</div>
 		);

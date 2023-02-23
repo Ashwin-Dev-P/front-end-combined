@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FarmerAddressItem from "../../components/FarmerAddressItem";
 
-import FarmerItem from "../components/FarmerItem";
 import ConsumerNavbar from "./ConsumerNavbar";
 
 export default class Addressbook extends Component {
